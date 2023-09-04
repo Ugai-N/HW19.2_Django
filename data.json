@@ -1,0 +1,117 @@
+[
+  {
+    "model": "catalog.product",
+    "pk": 33,
+    "fields": {
+      "title": "Регуляция эмоций",
+      "description": "Ослабляем негативные эмоции\r\nКонтакт с позитивными эмоциями\r\nРаспознаем эмоции и автоматические негативные мысли\r\nВалидация эмоции",
+      "pic": "",
+      "price": 10,
+      "create_date": null,
+      "change_date": null,
+      "category": 2
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 34,
+    "fields": {
+      "title": "Нетревожный бот",
+      "description": "Нейробиология и физиология тревоги\r\nКак помочь себе при тревоге?\r\nРазбираемся, что влияет на тревогу\r\nИспользуем дыхательные практики",
+      "pic": "",
+      "price": 10,
+      "create_date": null,
+      "change_date": null,
+      "category": 2
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 35,
+    "fields": {
+      "title": "Безоценочные суждения",
+      "description": "Оценочное vs безоценочное\r\nРазвиваем навык безоценочных суждений\r\nУчимся разделять фантазии и реальность\r\nПрокачиваем осознанную коммуникацию",
+      "pic": "",
+      "price": 10,
+      "create_date": null,
+      "change_date": null,
+      "category": 2
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 36,
+    "fields": {
+      "title": "Частная консультация",
+      "description": "",
+      "pic": "",
+      "price": 100,
+      "create_date": null,
+      "change_date": null,
+      "category": 3
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 37,
+    "fields": {
+      "title": "Участие в лекционно-дискуссионном клубе",
+      "description": "",
+      "pic": "",
+      "price": 30,
+      "create_date": null,
+      "change_date": null,
+      "category": 1
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 38,
+    "fields": {
+      "title": "Семейная консультация",
+      "description": "",
+      "pic": "",
+      "price": 140,
+      "create_date": null,
+      "change_date": null,
+      "category": 3
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 39,
+    "fields": {
+      "title": "Вебинар про панические атаки (онлайн)",
+      "description": "",
+      "pic": "",
+      "price": 20,
+      "create_date": null,
+      "change_date": null,
+      "category": 1
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 1,
+    "fields": {
+      "title": "Мероприятие",
+      "description": null
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 2,
+    "fields": {
+      "title": "Бот самопомощи",
+      "description": ""
+    }
+  },
+  {
+    "model": "catalog.category",
+    "pk": 3,
+    "fields": {
+      "title": "Консультация",
+      "description": null
+    }
+  }
+]
