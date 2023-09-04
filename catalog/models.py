@@ -4,6 +4,7 @@ NULLABLE = {'blank': True, 'null': True}
 
 
 class Product(models.Model):
+    """Класс для товаров"""
     title = models.CharField(max_length=100, verbose_name='Наименование')
     description = models.TextField(max_length=1000, verbose_name='Описание', **NULLABLE)
     pic = models.ImageField(upload_to='pics/', verbose_name='Превью', **NULLABLE)
@@ -22,6 +23,7 @@ class Product(models.Model):
 
 
 class Category(models.Model):
+    """Класс для категорий товаров"""
     title = models.CharField(max_length=100, verbose_name='Наименование')
     description = models.TextField(max_length=1000, verbose_name='Описание', **NULLABLE)
     # created_at = models.DateField(verbose_name='дата', **NULLABLE)
@@ -33,3 +35,17 @@ class Category(models.Model):
         verbose_name = 'Категория'
         verbose_name_plural = 'Категории'
         ordering = ('title',)
+
+
+class Contacts(models.Model):
+    """Класс для контакных данных компании"""
+    country = models.CharField(max_length=100, verbose_name='Страна')
+    tax_id = models.IntegerField(verbose_name='ИНН')
+    address = models.CharField(max_length=100, verbose_name='Адрес')
+
+    def __str__(self):
+        # return self.country, self.address, self.tax_id
+        return f'{self.address} ({self.country})'
+
+    class Meta:
+        verbose_name = 'Контакты'

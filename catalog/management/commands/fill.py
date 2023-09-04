@@ -7,14 +7,21 @@ from catalog.models import Category, Product
 class Command(BaseCommand):
     @staticmethod
     def load_data(file) -> list:
-        """   """
+        """Парсит данные из файла data.json,
+        возвращает два списка (товаров и категория)
+        для последующей выгрузки в БД в функции handle"""
+
         categories_lst = []
         products_lst = []
         with open(file, 'r', encoding='utf-8') as f:
             file_items = json.load(f)
             for item in file_items:
                 if item['model'] == "catalog.category":
-                    new_category = {'title': item['fields']['title'], 'pk': item['pk'], 'description': item['fields']['description']}
+                    new_category = {
+                        'title': item['fields']['title'],
+                        'pk': item['pk'],
+                        'description': item['fields']['description']
+                    }
                     categories_lst.append(Category(**new_category))
                 if item['model'] == "catalog.product":
                     new_product = {
@@ -31,10 +38,15 @@ class Command(BaseCommand):
 
     @staticmethod
     def delete_all() -> None:
+        """Удаляет все категории в БД. Все товары удаляются каскадом"""
         Category.objects.all().delete()
         # Product.objects.all().delete()
 
     def handle(self, *args, **kwargs):
+        """Удалает все данные из БД,
+        подгружает категории в БД
+        подгружает товары в БД"""
+
         Command.delete_all()
 
         categories = Command.load_data('data.json')[0]

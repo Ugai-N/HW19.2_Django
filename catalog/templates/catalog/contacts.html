@@ -23,7 +23,7 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto justify-content-end">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Что мы делаем?<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Что мы делаем?<span class="sr-only"></span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/contacts/">Контакты</a>
@@ -55,15 +55,15 @@
                     <table class="table table-striped">
                         <tr>
                             <td class="w-25">Страна</td>
-                            <td>Россия</td>
+                            <td>{{ country }}</td>
                         </tr>
                         <tr>
                             <td class="w-25">ИНН</td>
-                            <td>911144442</td>
+                            <td>{{ tax }}</td>
                         </tr>
                         <tr>
                             <td class="w-25">Адрес</td>
-                            <td>ул.Вагончатая, д.45, оф.3</td>
+                            <td> {{ address }} </td>
                         </tr>
                     </table>
                 </div>
