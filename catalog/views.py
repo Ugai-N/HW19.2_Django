@@ -9,7 +9,8 @@ def index(request):
     при переходе на главную страницу печатает в консоль 5 последних товаров"""
 
     print(Product.objects.all()[::-1][:5])
-    return render(request, 'catalog/index.html')
+    context = {'title': 'Vardikova & Co'}
+    return render(request, 'catalog/index.html', context)
 
 
 def contacts(request):
@@ -17,7 +18,7 @@ def contacts(request):
     передает в шаблон contacts данные модели Contacts"""
 
     str_address = Contacts.objects.get(pk=1)
-    data = {"tax": str_address.tax_id, "address": str_address.address, "country": str_address.country}
+    data = {"tax": str_address.tax_id, "address": str_address.address, "country": str_address.country, 'title': "Контакты"}
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
