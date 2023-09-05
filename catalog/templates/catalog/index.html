@@ -4,64 +4,22 @@
 
 <div class="container">
     <div class="row text-center">
+        {% for object in object_list %}
         <div class="col-4">
             <div class="card mb-4 box-shadow">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Регуляция эмоций</h4>
+                    <h4 class="my-0 font-weight-normal">{{ object.title }}</h4>
                 </div>
                 <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$10/мес</h1>
+                    <h1 class="card-title pricing-card-title">{{ object.price }}</h1>
                     <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-                        <ul>
-                        <li>Ослабляем негативные эмоции</li>
-                        <li>Контакт с позитивными эмоциями</li>
-                        <li>Распознаем эмоции и автоматические негативные мысли</li>
-                        <li>Валидация эмоции</li>
-                        </ul>
+                        {{ object.description|truncatechars:100}}
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-dark">Купить</button>
+                    <a href="{% url 'catalog:product' object.pk %}" type="button" class="btn btn-lg btn-block btn-dark">Подробнее</a>
                 </div>
             </div>
         </div>
-
-        <div class="col-4">
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Нетревожный бот</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$10/мес</h1>
-                    <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-                        <ul>
-                        <li>Нейробиология и физиология тревоги</li>
-                        <li>Как помочь себе при тревоге?</li>
-                        <li>Разбираемся, что влияет на тревогу</li>
-                        <li>Используем дыхательные практики</li>
-                        </ul>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-dark">Купить</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-4">
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Безоценочные суждения</h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">$10/мес</h1>
-                    <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-                        <ul>
-                        <li>Оценочное vs безоценочное</li>
-                        <li>Развиваем навык безоценочных суждений</li>
-                        <li>Учимся разделять фантазии и реальность</li>
-                        <li>Прокачиваем осознанную коммуникацию</li>
-                        </ul>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-dark">Купить</button>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
+</div>
 {% endblock %}
