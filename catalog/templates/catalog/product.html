@@ -1,54 +1,35 @@
 {% extends 'catalog/base.html' %}
+{% load my_tags %}
 {% block content %}
-
+{% load static %}
 
 <div class="container">
-    <div class="row text-center">
-        <div class="col-12">
-            <div class="card mb-4 box-shadow">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">{{ object.category }} <br> {{ object.title }} </h4>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title pricing-card-title">{{ object.price }}</h1>
-                    <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-                        <ul>
-                            {{ object.description }}
-                        </ul>
-                    </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-dark">Купить</button>
-                </div>
+
+    <div class="container my-1">
+        <div class="p-5 text-center text-bg-light border border-dashed rounded-5">
+            <h1 class="text-body-emphasis">{{ object.title }} </h1>
+            <h4 class="text-body-emphasis">{{ object.category }}</h4> <br>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+                {{ object.description }}
+            </p>
+            {% include 'catalog/includes/inc_catalog_botprice.html' %} <br>
+            <div class="d-inline-flex gap-2 mb-5">
+                <a href="{% url 'catalog:product' object.pk|prev_pk %}"
+                   class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+                    <<
+                </a>
+                <button class="d-inline-flex align-items-center btn btn-dark btn-lg px-4 rounded-pill" type="button">
+                    Купить
+                </button>
+                <a href="{% url 'catalog:product' object.pk|next_pk %}"
+                   class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+                    >>
+                </a>
             </div>
         </div>
     </div>
 
+</div>
 
-    <div class="row text-center">
-        <div class="col">
-            <div class="card shadow-sm">
-                <img class="bd-placeholder-img card-img-top"
-                     src="#"
-                </img>
-                <div class="card-body">
-                    <p class="card-text">
-                        {{ object.title }} <br>
-                        ({{ object.category }})
-                    </p>
-                    <p class="card-text">
-                        {{ object.description }}
-                    </p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <a href="#" type="button"
-                               class="btn btn-sm btn-outline-secondary">Смотреть</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-
-    {% endblock %}
+{% endblock %}
 </div>

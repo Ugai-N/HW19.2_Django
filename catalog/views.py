@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from catalog.models import Product, Contacts
+from catalog.models import Product, Contacts, Category
 
 
 # Create your views here.
@@ -29,8 +29,17 @@ def contacts(request):
 
 
 def product(request, pk):
-    """---"""
+    """Обработка страницы с одним товаром. Выводится из index или category
+    Для перехода к след. или предыдущему товару используется тег next_pk и prev_pk соответственно"""
 
     item = Product.objects.get(pk=pk)
     context = {"object": item, 'title': 'Vardikova & Co'}
     return render(request, 'catalog/product.html', context)
+
+
+def category(request, pk):
+    """Обработка страницы с товарами определенной категорий"""
+
+    category_items = Product.objects.filter(category_id=pk)
+    context = {"object_list": category_items, 'title': Category.objects.get(pk=pk)}
+    return render(request, 'catalog/category.html', context)

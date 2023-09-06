@@ -1,0 +1,8 @@
+<div class="card-body">
+    {% if object.category_id == 2 %}
+    <h1 class="card-title pricing-card-title"> $ {{ object.price }}<small
+            class="text-body-secondary fw-light">/мес</small></h1>
+    {% else %}
+    <h1 class="card-title pricing-card-title"> $ {{ object.price }}</h1>
+    {% endif %}
+</div>

@@ -19,35 +19,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto justify-content-end">
+        {% include 'catalog/includes/inc_catalog_menu.html' %}
 
-
-                <li class="nav-item dropdown">
-                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Что мы делаем?
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="{% url 'catalog:index' %}">Боты самопомощи</a></li>
-                        <li><a class="dropdown-item" href="{% url 'catalog:index' %}">Консультации</a></li>
-                        <li><a class="dropdown-item" href="{% url 'catalog:index' %}">Мероприятия</a></li>
-                    </ul>
-                </li>
-
-
-                <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'catalog:index' %}">Что мы делаем?<span class="sr-only"></span></a>
-                </li>
-
-
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'catalog:contacts' %}">Контакты</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'catalog:index' %}">О нас</a>
-                </li>
-            </ul>
-        </div>
     </nav>
 </div>
 
@@ -69,9 +42,9 @@
         <div class="col-6 col-md">
             <h5>Категории</h5>
             <ul class="list-unstyled text-small">
-                <li><a class="text-muted" href="{% url 'catalog:index' %}">Боты самопомощи</a></li>
-                <li><a class="text-muted" href="{% url 'catalog:index' %}">Консультации</a></li>
-                <li><a class="text-muted" href="{% url 'catalog:index' %}">Мероприятия</a></li>
+                <li><a class="text-muted" href="{% url 'catalog:category' 2 %}">Боты самопомощи</a></li>
+                <li><a class="text-muted" href="{% url 'catalog:category' 3 %}">Консультации</a></li>
+                <li><a class="text-muted" href="{% url 'catalog:category' 1 %}">Мероприятия</a></li>
             </ul>
         </div>
         <div class="col-6 col-md">
