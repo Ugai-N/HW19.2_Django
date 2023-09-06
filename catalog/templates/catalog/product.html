@@ -5,8 +5,9 @@
 
 <div class="container">
 
-    <div class="container my-1">
-        <div class="p-5 text-center text-bg-light border border-dashed rounded-5">
+    <div class="container">
+        <div class="p-1 text-center text-bg-light border border-dashed rounded-5">
+            <img src="{% mymedia object.pic %}">
             <h1 class="text-body-emphasis">{{ object.title }} </h1>
             <h4 class="text-body-emphasis">{{ object.category }}</h4> <br>
             <p class="col-lg-8 mx-auto fs-5 text-muted">
@@ -26,10 +27,11 @@
                     >>
                 </a>
             </div>
+            <div class="row text-start text-muted">
+                <p>Запись создана: {{ object.created_at }}</p>
+                <p>Запись изменена: {{ object.updated_at }}</p>
+            </div>
         </div>
     </div>
-
 </div>
-
 {% endblock %}
-</div>

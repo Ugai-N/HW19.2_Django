@@ -4,21 +4,30 @@ from catalog.models import Product
 
 register = template.Library()
 
+
 @register.filter()
 def next_pk(pk):
-    new_pk = pk + 1
-    try:
-        Product.objects.get(pk=new_pk)
-        return new_pk
-    except Exception:
-        return pk
+    lst = [item.pk for item in Product.objects.all()]
+    new_index = lst.index(pk) + 1
+    if new_index <= len(lst) - 1:
+        return lst[new_index]
+    else:
+        return lst[0]
+
 
 @register.filter()
 def prev_pk(pk):
-    new_pk = pk - 1
-    try:
-        Product.objects.get(pk=new_pk)
-        return new_pk
-    except Exception:
-        return pk
+    lst = [item.pk for item in Product.objects.all()]
+    new_index = lst.index(pk) - 1
+    if new_index >= 0:
+        return lst[new_index]
+    else:
+        return lst[len(lst) - 1]
 
+
+@register.simple_tag()
+def mymedia(value):
+    if value:
+        return f'/media/{value}'
+    else:
+        return ''

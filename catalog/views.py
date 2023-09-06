@@ -43,3 +43,17 @@ def category(request, pk):
     category_items = Product.objects.filter(category_id=pk)
     context = {"object_list": category_items, 'title': Category.objects.get(pk=pk)}
     return render(request, 'catalog/category.html', context)
+
+
+def add_item(request):
+    """Обработка POST запроса на странице /add_item"""
+
+    context = {'title': "Добавить новый товар"}
+    if request.method == "POST":
+        title = request.POST.get('title')
+        description = request.POST.get('description') if request.POST.get('description') else None
+        pic = request.POST.get('pic') if request.POST.get('pic') else None
+        price = request.POST.get('price')
+        category = Category(request.POST.get('category'))
+        Product.objects.create(title=title, description=description, pic=pic, price=price, category=category)
+    return render(request, 'catalog/add_item.html', context)

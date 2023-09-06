@@ -29,8 +29,8 @@ class Command(BaseCommand):
                         'description': item['fields']['description'],
                         'pic': item['fields']['pic'],
                         'price': item['fields']['price'],
-                        'created_at': item['fields']['create_date'],
-                        'updated_at': item['fields']['change_date'],
+                        'created_at': item['fields']['created_at'],
+                        'updated_at': item['fields']['updated_at'],
                         'category': Category(item['fields']['category'])
                     }
                     products_lst.append(Product(**new_product))

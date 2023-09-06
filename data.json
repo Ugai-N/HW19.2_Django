@@ -1,93 +1,119 @@
 [
   {
     "model": "catalog.product",
-    "pk": 33,
+    "pk": 47,
     "fields": {
       "title": "Регуляция эмоций",
       "description": "Ослабляем негативные эмоции\r\nКонтакт с позитивными эмоциями\r\nРаспознаем эмоции и автоматические негативные мысли\r\nВалидация эмоции",
       "pic": "",
       "price": 10,
-      "create_date": null,
-      "change_date": null,
+      "created_at": null,
+      "updated_at": null,
       "category": 2
     }
   },
   {
     "model": "catalog.product",
-    "pk": 34,
+    "pk": 48,
     "fields": {
       "title": "Нетревожный бот",
-      "description": "Нейробиология и физиология тревоги\r\nКак помочь себе при тревоге?\r\nРазбираемся, что влияет на тревогу\r\nИспользуем дыхательные практики",
+      "description": "-Нейробиология и физиология тревоги\r\n-Как помочь себе при тревоге?\r\n-Разбираемся, что влияет на тревогу\r\n-Используем дыхательные практики",
       "pic": "",
       "price": 10,
-      "create_date": null,
-      "change_date": null,
+      "created_at": null,
+      "updated_at": "2023-09-06T13:59:10.437Z",
       "category": 2
     }
   },
   {
     "model": "catalog.product",
-    "pk": 35,
+    "pk": 49,
     "fields": {
       "title": "Безоценочные суждения",
       "description": "Оценочное vs безоценочное\r\nРазвиваем навык безоценочных суждений\r\nУчимся разделять фантазии и реальность\r\nПрокачиваем осознанную коммуникацию",
       "pic": "",
       "price": 10,
-      "create_date": null,
-      "change_date": null,
+      "created_at": null,
+      "updated_at": null,
       "category": 2
     }
   },
   {
     "model": "catalog.product",
-    "pk": 36,
+    "pk": 50,
     "fields": {
       "title": "Частная консультация",
-      "description": "",
+      "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Частная консультация>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 100,
-      "create_date": null,
-      "change_date": null,
+      "created_at": null,
+      "updated_at": null,
       "category": 3
     }
   },
   {
     "model": "catalog.product",
-    "pk": 37,
+    "pk": 51,
     "fields": {
-      "title": "Участие в лекционно-дискуссионном клубе",
-      "description": "",
+      "title": "Лекционно-дискуссионный клуб",
+      "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Участие в лекционно-дискуссионном клубе>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 30,
-      "create_date": null,
-      "change_date": null,
+      "created_at": null,
+      "updated_at": null,
       "category": 1
     }
   },
   {
     "model": "catalog.product",
-    "pk": 38,
+    "pk": 52,
     "fields": {
       "title": "Семейная консультация",
-      "description": "",
+      "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Семейная консультация>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 140,
-      "create_date": null,
-      "change_date": null,
+      "created_at": null,
+      "updated_at": null,
       "category": 3
     }
   },
   {
     "model": "catalog.product",
-    "pk": 39,
+    "pk": 53,
     "fields": {
-      "title": "Вебинар про панические атаки (онлайн)",
-      "description": "",
+      "title": "Вебинар про панические атаки",
+      "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Вебинар про панические атаки (онлайн)>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 20,
-      "create_date": null,
-      "change_date": null,
+      "created_at": null,
+      "updated_at": null,
       "category": 1
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 56,
+    "fields": {
+      "title": "Вебинар про тревогу",
+      "description": "длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание /",
+      "pic": "pics/трегова.jpeg",
+      "price": 20,
+      "created_at": null,
+      "updated_at": "2023-09-06T14:38:03.717Z",
+      "category": 1
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 58,
+    "fields": {
+      "title": "TEST",
+      "description": "test test test test test test \r\ntest test test test test test \r\ntest test test test test test\r\ntest test test test test test \r\ntest test test test test test \r\ntest test test test test test\r\ntest test test test test test \r\ntest test test test test test \r\ntest test test test test test",
+      "pic": "",
+      "price": 10,
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-06T14:00:16.179Z",
+      "category": 2
     }
   },
   {
@@ -112,6 +138,15 @@
     "fields": {
       "title": "Консультация",
       "description": null
+    }
+  },
+  {
+    "model": "catalog.contacts",
+    "pk": 1,
+    "fields": {
+      "country": "Россия",
+      "tax_id": 123123123,
+      "address": "ул.Вагончатая, д.45, оф.3"
     }
   }
 ]
