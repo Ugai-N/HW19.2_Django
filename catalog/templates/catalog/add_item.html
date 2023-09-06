@@ -1,0 +1,45 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+
+<div class="container text-center">
+    <div class="row text-center">
+        <div class="col-4 text-center">
+            <div class="card gy-5 ">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal text-center">Укажите данные нового товара</h4>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="" class="form-floating">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <input type="text" name="title" class="form-control" id="title" placeholder="Наименование"
+                                   required>
+                        </div>
+                        <select class="form-select" name="category" aria-label="category">
+                            <option selected>Выберите категорию</option>
+                            <option value=2>Бот самопомощи</option>
+                            <option value=3>Консультация</option>
+                            <option value=1>Мероприятие</option>
+                            required</select><br>
+                        <div class="mb-3">
+                            <textarea name="description" class="form-control" id="description" placeholder="Описание"
+                            ></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" name="price" class="form-control" id="price"
+                                   placeholder="Цена"
+                                   required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <input type="file" class="form-control" id="inputGroupFile02">
+                            <label class="input-group-text" for="inputGroupFile02"></label>
+                        </div>
+                        <input class="btn btn-dark w-100" type="submit" value="Отправить"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</div>

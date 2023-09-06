@@ -9,8 +9,8 @@ class Product(models.Model):
     description = models.TextField(max_length=1000, verbose_name='Описание', **NULLABLE)
     pic = models.ImageField(upload_to='pics/', verbose_name='Превью', **NULLABLE)
     price = models.IntegerField(verbose_name='Цена')
-    create_date = models.DateField(verbose_name='Дата создания', **NULLABLE)
-    change_date = models.DateField(verbose_name='Дата изменения', **NULLABLE)
+    created_at = models.DateField(auto_now_add=True, verbose_name='Дата создания', **NULLABLE)
+    updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата изменения', **NULLABLE)
     category = models.ForeignKey('Category', on_delete=models.CASCADE, verbose_name='Категория')
 
     def __str__(self):
@@ -26,7 +26,6 @@ class Category(models.Model):
     """Класс для категорий товаров"""
     title = models.CharField(max_length=100, verbose_name='Наименование')
     description = models.TextField(max_length=1000, verbose_name='Описание', **NULLABLE)
-    # created_at = models.DateField(verbose_name='дата', **NULLABLE)
 
     def __str__(self):
         return f'{self.title}'
@@ -44,7 +43,6 @@ class Contacts(models.Model):
     address = models.CharField(max_length=100, verbose_name='Адрес')
 
     def __str__(self):
-        # return self.country, self.address, self.tax_id
         return f'{self.address} ({self.country})'
 
     class Meta:
