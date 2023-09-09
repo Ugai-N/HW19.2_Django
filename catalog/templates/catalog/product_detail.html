@@ -14,7 +14,7 @@
                 {{ object.description }}
             </p>
             {% include 'catalog/includes/inc_catalog_botprice.html' %} <br>
-            <div class="d-inline-flex gap-2 mb-5">
+            <div class="d-inline-flex gap-2 mb-3">
                 <a href="{% url 'catalog:product' object.pk|prev_pk %}"
                    class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
                     <<
@@ -28,10 +28,20 @@
                 </a>
             </div>
             <div class="row text-start text-muted">
-                <p>Запись создана: {{ object.created_at }}</p>
-                <p>Запись изменена: {{ object.updated_at }}</p>
+                <h6>Запись создана: {{ object.created_at }}</h6>
+                <h6>Запись изменена: {{ object.updated_at }}</h6>
             </div>
+<!--            <div class="row text-end">-->
+<!--                <div class="d-flex justify-content-between align-items-end">-->
+<!--                    <div class="btn-group">-->
+<!--                        <a href="#" type="button"-->
+<!--                           class="btn btn-sm btn-outline-secondary float-right">Edit</a>-->
+<!--                        <a href="#" type="button"-->
+<!--                           class="btn btn-sm btn-outline-danger float-right">Delete</a>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}

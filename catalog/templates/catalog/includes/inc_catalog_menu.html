@@ -7,9 +7,9 @@
                 Что мы делаем?
             </button>
             <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="{% url 'catalog:category' 2 %}">Боты самопомощи</a></li>
-                <li><a class="dropdown-item" href="{% url 'catalog:category' 3 %}">Консультации</a></li>
-                <li><a class="dropdown-item" href="{% url 'catalog:category' 1 %}">Мероприятия</a></li>
+                <li><a class="dropdown-item" href="{% url 'catalog:category_products' 2 %}">Боты самопомощи</a></li>
+                <li><a class="dropdown-item" href="{% url 'catalog:category_products' 3 %}">Консультации</a></li>
+                <li><a class="dropdown-item" href="{% url 'catalog:category_products' 1 %}">Мероприятия</a></li>
             </ul>
         </li>
 
@@ -21,7 +21,7 @@
             <a class="nav-link" href="{% url 'catalog:index' %}">О нас</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{% url 'catalog:add_item' %}">Добавить товар</a>
+            <a class="nav-link" href="{% url 'catalog:add_product' %}">Добавить товар</a>
         </li>
     </ul>
 </div>
