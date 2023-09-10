@@ -1,16 +1,15 @@
 from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DetailView, ListView
 
 from catalog.models import Product, Contacts, Category
 
 
-# Create your views here.
-def index(request):
-    """Обработка запроса на главной странице+
-    при переходе на главную страницу печатает в консоль 5 последних товаров"""
-
-    # print(Product.objects.all()[::-1][:5])
-    context = {'object_list': Product.objects.all(), 'title': 'Vardikova & Co'}
-    return render(request, 'catalog/index.html', context)
+class ProductListView(ListView):
+    paginate_by = 3
+    model = Product
+    extra_context = {'title': 'Vardikova & Co',
+                     'add_title': 'Психологическая помощь на разные случаи жизни в вашем кармане'}
 
 
 def contacts(request):
@@ -19,41 +18,33 @@ def contacts(request):
 
     str_address = Contacts.objects.get(pk=1)
     context = {"tax": str_address.tax_id, "address": str_address.address, "country": str_address.country, 'title': "Контакты"}
+
     if request.method == "POST":
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
         phone = request.POST.get('phone') if request.POST.get('phone') else None
         print(f"{name} ({email}, {phone}): {message}")
-    return render(request, 'catalog/contacts.html', context)
+    return render(request, 'catalog/contacts_list.html', context)
 
 
-def product(request, pk):
-    """Обработка страницы с одним товаром. Выводится из index или category
-    Для перехода к след. или предыдущему товару используется тег next_pk и prev_pk соответственно"""
-
-    item = Product.objects.get(pk=pk)
-    context = {"object": item, 'title': 'Vardikova & Co'}
-    return render(request, 'catalog/product.html', context)
+class ProductDetailView(DetailView):
+    model = Product
+    extra_context = {'title': 'Vardikova & Co'}
 
 
-def category(request, pk):
-    """Обработка страницы с товарами определенной категорий"""
+def category_products(request, pk):
+    """Обработка страницы с товарами определенной категорий
+    ListView оставляем на Главную index, здесь будто логичнее оставить FBV.
+    Но и ProductListView(CBV), и category_products(FBV) ссылаются на один шаблон product_list.html"""
 
     category_items = Product.objects.filter(category_id=pk)
-    context = {"object_list": category_items, 'title': Category.objects.get(pk=pk)}
-    return render(request, 'catalog/category.html', context)
+    context = {"object_list": category_items, 'title': Category.objects.get(pk=pk),
+               'add_title': 'Психологическая помощь на разные случаи жизни в вашем кармане'}
+    return render(request, 'catalog/product_list.html', context)
 
 
-def add_item(request):
-    """Обработка POST запроса на странице /add_item"""
-
-    context = {'title': "Добавить новый товар"}
-    if request.method == "POST":
-        title = request.POST.get('title')
-        description = request.POST.get('description') if request.POST.get('description') else None
-        pic = request.POST.get('pic') if request.POST.get('pic') else None
-        price = request.POST.get('price')
-        category = Category(request.POST.get('category'))
-        Product.objects.create(title=title, description=description, pic=pic, price=price, category=category)
-    return render(request, 'catalog/add_item.html', context)
+class ProductCreateView(CreateView):
+    model = Product
+    fields = ('title', 'description', 'pic', 'price', 'category')
+    success_url = reverse_lazy('catalog:index')
