@@ -7,7 +7,8 @@ from catalog.models import Product, Contacts, Category
 
 class ProductListView(ListView):
     model = Product
-    extra_context = {'title': 'Vardikova & Co'}
+    extra_context = {'title': 'Vardikova & Co',
+                     'add_title': 'Психологическая помощь на разные случаи жизни в вашем кармане'}
 
 
 def contacts(request):
@@ -37,12 +38,12 @@ def category_products(request, pk):
     Но и ProductListView(CBV), и category_products(FBV) ссылаются на один шаблон product_list.html"""
 
     category_items = Product.objects.filter(category_id=pk)
-    context = {"object_list": category_items, 'title': Category.objects.get(pk=pk)}
+    context = {"object_list": category_items, 'title': Category.objects.get(pk=pk),
+               'add_title': 'Психологическая помощь на разные случаи жизни в вашем кармане'}
     return render(request, 'catalog/product_list.html', context)
 
 
 class ProductCreateView(CreateView):
     model = Product
     fields = ('title', 'description', 'pic', 'price', 'category')
-    extra_context = {'title': "Добавить новый товар"}
     success_url = reverse_lazy('catalog:index')

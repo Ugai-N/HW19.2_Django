@@ -3,18 +3,18 @@
 {% block content %}
 {% load static %}
 
-<div class="container">
-
-    <div class="container">
-        <div class="p-1 text-center text-bg-light border border-dashed rounded-5">
-            <img src="{% mymedia object.pic %}">
+<div class="p-1 text-center text-bg">
+    <div class="row g-0 border border-dashed rounded-5 overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+        <div class="col-3 p-4 d-flex flex-column position-static">
+        </div>
+        <div class="col-6 p-4 d-flex flex-column position-static">
             <h1 class="text-body-emphasis">{{ object.title }} </h1>
             <h4 class="text-body-emphasis">{{ object.category }}</h4> <br>
-            <p class="col-lg-8 mx-auto fs-5 text-muted">
+            <p class="col text-muted">
                 {{ object.description }}
             </p>
             {% include 'catalog/includes/inc_catalog_botprice.html' %} <br>
-            <div class="d-inline-flex gap-2 mb-3">
+            <div class="d-inline-flex gap-2 mb-3 mx-auto fs-5">
                 <a href="{% url 'catalog:product' object.pk|prev_pk %}"
                    class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
                     <<
@@ -28,20 +28,13 @@
                 </a>
             </div>
             <div class="row text-start text-muted">
-                <h6>Запись создана: {{ object.created_at }}</h6>
-                <h6>Запись изменена: {{ object.updated_at }}</h6>
+                <a>Запись создана: {{ object.created_at }}</a>
+                <a>Запись изменена: {{ object.updated_at }}</a>
             </div>
-<!--            <div class="row text-end">-->
-<!--                <div class="d-flex justify-content-between align-items-end">-->
-<!--                    <div class="btn-group">-->
-<!--                        <a href="#" type="button"-->
-<!--                           class="btn btn-sm btn-outline-secondary float-right">Edit</a>-->
-<!--                        <a href="#" type="button"-->
-<!--                           class="btn btn-sm btn-outline-danger float-right">Delete</a>-->
-<!--                    </div>-->
-<!--                </div>-->
 
-<!--            </div>-->
+        </div>
+        <div class="col-3 d-none d-lg-block gy-5">
+            <img src="{% mymedia object.pic %}">
         </div>
     </div>
     {% endblock %}

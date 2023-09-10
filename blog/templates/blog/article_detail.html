@@ -1,0 +1,101 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+{% load my_tags %}
+<main class="container">
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="row mb-4">
+                <div class="col d-none d-lg-block">
+                    {% if object.preview %}
+                    <img src="{% mymedia object.preview %}">
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-8">
+                    <div class="d-flex justify-content-between align-items">
+                        <div class="btn-group">
+                            {% if object.is_published %}
+                            <a href="{% url 'blog:toggle_publication' object.slug %}" type="button"
+                               class="btn btn-sm btn-outline-warning">Unpublish</a>
+                            {% else %}
+                            <a href="{% url 'blog:toggle_publication' object.slug %}" type="button"
+                               class="btn btn-sm btn-outline-success">Publish</a>
+                            {% endif %}
+
+                            <a href="{% url 'blog:edit_article' object.slug %}" type="button"
+                               class="btn btn-sm btn-outline-secondary">Edit</a>
+                            <a href="{% url 'blog:delete_article' object.slug %}" type="button"
+                               class="btn btn-sm btn-outline-danger">Delete</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">{{ object.title }}</h2>
+                <p class="blog-post-meta mb-1">{{ object.created_at }}</p>
+                <em class="blog-post-meta"> Просмотры: {{ object.views_count }}</em><br><br><br>
+
+                <p>{{ object.content }}</p>
+            </article>
+
+
+        </div>
+
+
+        <div class="col-md-4">
+            <div>
+                <h4 class="fst-italic">Recent posts</h4>
+                <ul class="list-unstyled">
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                           href="#">
+                            <svg class="bd-placeholder-img" width="100%" height="96"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#777"/>
+                            </svg>
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Example blog post title</h6>
+                                <small class="text-body-secondary">January 15, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                           href="#">
+                            <svg class="bd-placeholder-img" width="100%" height="96"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#777"/>
+                            </svg>
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">This is another blog post title</h6>
+                                <small class="text-body-secondary">January 14, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                           href="#">
+                            <svg class="bd-placeholder-img" width="100%" height="96"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                                <rect width="100%" height="100%" fill="#777"/>
+                            </svg>
+                            <div class="col-lg-8">
+                                <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                                <small class="text-body-secondary">January 13, 2023</small>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}
