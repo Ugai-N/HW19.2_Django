@@ -7,7 +7,7 @@
     <title>VaGon</title>
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/blog.css' %} " rel="stylesheet">
-<style>
+    <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -80,7 +80,8 @@
         z-index: 1500;
       }
 
-</style>
+
+    </style>
 </head>
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
@@ -106,6 +107,17 @@
 
 {% block content %}
 {% endblock %}
+
+<nav aria-label="навигация по страницам">
+    <ul class="pagination justify-content-center">
+        {% for p in paginator.page_range %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ p }}">{{ p }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>
+
 
 <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">

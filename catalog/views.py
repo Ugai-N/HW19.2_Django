@@ -6,6 +6,7 @@ from catalog.models import Product, Contacts, Category
 
 
 class ProductListView(ListView):
+    paginate_by = 3
     model = Product
     extra_context = {'title': 'Vardikova & Co',
                      'add_title': 'Психологическая помощь на разные случаи жизни в вашем кармане'}
