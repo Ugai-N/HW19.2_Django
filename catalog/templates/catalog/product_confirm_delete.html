@@ -1,0 +1,22 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+
+<div class="container text-center">
+    <div class="row text-center">
+        <div class="col-5 text-start">
+            <div class="card gy-5 ">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal text-center">Удалить товар "{{object.title}}"? </h4>
+                </div>
+                <div class="card-body text-center">
+                    <form method="POST" action="" class="form-floating" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <button class="btn btn-outline-danger" type="submit">ДА</button>
+                        <a class="btn btn-outline-warning" href="{% url 'catalog:category_products' object.category_id %}">НЕТ</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</div>

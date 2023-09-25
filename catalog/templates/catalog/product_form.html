@@ -2,45 +2,52 @@
 {% block content %}
 
 <div class="container text-center">
-    <div class="row text-center">
-        <div class="col-5 text-start">
+    <form method="POST" action="" class="row gx-5" enctype="multipart/form-data">
+        <div class="col-6 text-start">
             <div class="card gy-5 ">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal text-center">Создать новый товар</h4>
+                    <h4 class="my-0 font-weight-normal text-center">
+                        {% if object %}
+                        Изменить товар
+                        {% else %}
+                        Создать новый товар
+                        {% endif %}
+                    </h4>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="" class="form-floating" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-<!--                        <div class="mb-3">-->
-<!--                            <input type="text" name="title" class="form-control" id="title" placeholder="Наименование"-->
-<!--                                   required>-->
-<!--                        </div>-->
-<!--                        <select class="form-select" name="category" aria-label="category">-->
-<!--                            <option selected>Выберите категорию</option>-->
-<!--                            <option value=2>Бот самопомощи</option>-->
-<!--                            <option value=3>Консультация</option>-->
-<!--                            <option value=1>Мероприятие</option>-->
-<!--                            required</select><br>-->
-<!--                        <div class="mb-3">-->
-<!--                            <textarea name="description" class="form-control" id="description" placeholder="Описание"-->
-<!--                            ></textarea>-->
-<!--                        </div>-->
-<!--                        <div class="mb-3">-->
-<!--                            <input type="text" name="price" class="form-control" id="price"-->
-<!--                                   placeholder="Цена"-->
-<!--                                   required>-->
-<!--                        </div>-->
-
-<!--                        <div class="input-group mb-3">-->
-<!--                            <input type="file" class="form-control" id="inputGroupFile02">-->
-<!--                            <label class="input-group-text" for="inputGroupFile02"></label>-->
-<!--                        </div>-->
-                        <input class="btn btn-dark w-100" type="submit" value="Отправить"/>
-                    </form>
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-dark w-100" type="submit">
+                        {% if object %}
+                        Сохранить
+                        {% else %}
+                        Создать
+                        {% endif %}
+                    </button>
                 </div>
             </div>
         </div>
-    </div>
+        <div class="col-5 text-start">
+            <div class="card gy-5 ">
+                <div class="card-header">
+                    <h6 class="my-0 font-weight-normal text-center">
+                        Версии товара
+                    </h6>
+                    <h4 class="my-0 font-weight-normal text-center">
+                        {{ object.title }}
+                    </h4>
+                </div>
+                <div class="card-body">
+                    {{ formset.management_form }}
+                    {% for form in formset.forms %}
+                    {{ form.as_p }}
+                     {% if not forloop.last %}
+                    <hr>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </form>
     {% endblock %}
 </div>
