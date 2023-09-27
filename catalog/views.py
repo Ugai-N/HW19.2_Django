@@ -1,11 +1,24 @@
+from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin, AccessMixin
 from django.db import transaction
 from django.forms import inlineformset_factory
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, DetailView, ListView, UpdateView, DeleteView
 
 from catalog.forms import ProductForm, VersionForm
 from catalog.models import Product, Contacts, Category, Version
+
+
+class OwnerRequiredMixin(AccessMixin):
+    def dispatch(self, request, *args, **kwargs):
+        if not request.user.is_authenticated:
+            return self.handle_no_permission()
+        if request.user.is_authenticated:
+            if request.user != self.get_object().owner or request.user.is_staff:
+                messages.info(request, 'Изменение и удаление статьи доступно только автору')
+                return redirect('/users/')
+        return super().dispatch(request, *args, **kwargs)
 
 
 class ProductListView(ListView):
@@ -57,15 +70,21 @@ def category_products(request, pk):
     return render(request, 'catalog/product_list.html', context)
 
 
-class ProductCreateView(CreateView):
+class ProductCreateView(LoginRequiredMixin, CreateView):
     model = Product
     form_class = ProductForm
 
     def get_success_url(self):
         return reverse('catalog:category_products', args=[self.object.category_id])
 
+    def form_valid(self, form):
+        if form.is_valid():
+            form.instance.owner = self.request.user
+            form.save()
+        return super().form_valid(form)
 
-class ProductUpdateView(UpdateView):
+
+class ProductUpdateView(OwnerRequiredMixin, UpdateView):
     model = Product
     form_class = ProductForm
 
@@ -91,7 +110,7 @@ class ProductUpdateView(UpdateView):
         return super().form_valid(form)
 
 
-class ProductDeleteView(DeleteView):
+class ProductDeleteView(OwnerRequiredMixin, DeleteView):
     model = Product
 
     def get_success_url(self):

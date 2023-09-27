@@ -1,119 +1,1472 @@
 [
   {
-    "model": "catalog.product",
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2023-09-02T15:19:30.841Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Регуляция эмоций: 10",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2023-09-02T15:20:03.776Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Нетревожный бот: 10",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2023-09-02T15:20:43.520Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Безоценочные суждения: 10",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2023-09-02T15:30:29.927Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Участие в лекционно-дискуссионном клубе: 30",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2023-09-02T15:30:29.929Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Частная консультация: 100",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2023-09-02T15:31:46.969Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "2",
+      "object_repr": "Бот самопомощи",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2023-09-02T16:18:27.650Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "Вебинар про панические атаки (онлайн): 20",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2023-09-02T16:18:27.653Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "Вебинар про панические атаки (онлайн): 20",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2023-09-02T16:18:27.654Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "13",
+      "object_repr": "Вебинар про тревогу (онлайн): 20",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2023-09-02T16:18:27.654Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Вебинар про тревогу (онлайн): 20",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2023-09-02T16:45:31.181Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "5",
+      "object_repr": "Бот самопомощи",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2023-09-02T16:45:31.183Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "6",
+      "object_repr": "Консультация",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2023-09-02T16:45:31.184Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "4",
+      "object_repr": "Мероприятие!!!",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2023-09-02T16:49:07.887Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "Безоценочные суждения: 10",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2023-09-02T16:49:07.889Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "Нетревожный бот: 10",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2023-09-02T16:49:07.890Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "Регуляция эмоций: 10",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2023-09-02T16:49:07.891Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "20",
+      "object_repr": "Семейная консультация: 140",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2023-09-02T16:49:07.892Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "19",
+      "object_repr": "Участие в лекционно-дискуссионном клубе: 30",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2023-09-02T16:49:07.893Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "Частная консультация: 100",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2023-09-02T16:49:41.707Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "11",
+      "object_repr": "Бот самопомощи",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2023-09-02T16:49:41.709Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "8",
+      "object_repr": "Бот самопомощи",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2023-09-02T16:49:41.710Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "12",
+      "object_repr": "Консультация",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2023-09-02T16:49:41.711Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "9",
+      "object_repr": "Консультация",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2023-09-02T16:49:41.712Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "10",
+      "object_repr": "Мероприятие",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2023-09-02T16:49:41.712Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "7",
+      "object_repr": "Мероприятие",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2023-09-02T17:26:03.543Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "39",
+      "object_repr": "Вебинар про панические атаки (онлайн): 20",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2023-09-04T10:30:30.768Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "блаблаблабла (Россия)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2023-09-04T11:30:46.850Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "ул.Вагончатая, д.45, оф.3 (Россия)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u041d\\u041d\", \"\\u0410\\u0434\\u0440\\u0435\\u0441\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2023-09-05T18:49:19.208Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "46",
+      "object_repr": "Вебинар про панические атаки (онлайн): 20",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2023-09-05T18:49:53.941Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "45",
+      "object_repr": "Семейная консультация: 140",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2023-09-05T18:50:13.611Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "44",
+      "object_repr": "Участие в лекционно-дискуссионном клубе: 30",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2023-09-05T18:50:36.501Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "43",
+      "object_repr": "Частная консультация: 100",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2023-09-05T19:46:16.994Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "53",
+      "object_repr": "Вебинар про панические атаки (онлайн): 20",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2023-09-05T19:46:29.530Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "52",
+      "object_repr": "Семейная консультация: 140",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+      "action_time": "2023-09-05T19:46:39.297Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "51",
+      "object_repr": "Участие в лекционно-дискуссионном клубе: 30",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+      "action_time": "2023-09-05T19:46:45.408Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "51",
+      "object_repr": "Участие в лекционно-дискуссионном клубе: 30",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+      "action_time": "2023-09-05T19:46:53.865Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "50",
+      "object_repr": "Частная консультация: 100",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+      "action_time": "2023-09-05T19:48:04.134Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "53",
+      "object_repr": "Вебинар про панические атаки: 20",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+      "action_time": "2023-09-05T19:48:15.863Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "51",
+      "object_repr": "Лекционно-дискуссионный клуб: 30",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0438\\u043c\\u0435\\u043d\\u043e\\u0432\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+      "action_time": "2023-09-06T12:25:18.082Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "55",
+      "object_repr": "Вебинар про тревогу: 20",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+      "action_time": "2023-09-06T12:25:18.125Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "54",
+      "object_repr": "Вебинар про тревогу: 20",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+      "action_time": "2023-09-06T13:51:11.280Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "57",
+      "object_repr": "тест: 10",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+      "action_time": "2023-09-06T13:59:10.441Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "48",
+      "object_repr": "Нетревожный бот: 10",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+      "action_time": "2023-09-06T13:59:59.033Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "58",
+      "object_repr": "TEST: 10",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+      "action_time": "2023-09-06T14:00:16.180Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "58",
+      "object_repr": "TEST: 10",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+      "action_time": "2023-09-06T14:38:03.723Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "56",
+      "object_repr": "Вебинар про тревогу: 20",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435\", \"\\u041f\\u0440\\u0435\\u0432\\u044c\\u044e\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
     "pk": 47,
+    "fields": {
+      "action_time": "2023-09-09T14:06:22.831Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "67",
+      "object_repr": "TEST: 10",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+      "action_time": "2023-09-09T14:06:22.838Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "69",
+      "object_repr": "wwwwwwwwww: 10",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+      "action_time": "2023-09-10T17:09:50.694Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "13",
+      "object_repr": "статья из админки (не опубликовано)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+      "action_time": "2023-09-25T10:30:56.773Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Нетревожный бот (полная версия)(Нетревожный бот)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+      "action_time": "2023-09-25T11:32:10.081Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Нетревожный бот (полная версия)(Нетревожный бот)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0443\\u0449\\u0430\\u044f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+      "action_time": "2023-09-25T14:12:09.494Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "8",
+      "object_repr": "Задача(Медитации)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+      "action_time": "2023-09-25T14:23:17.251Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "Задача(Вебинар про тревогу)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+      "action_time": "2023-09-25T14:46:38.389Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "13",
+      "object_repr": "dd(Вебинар про тревогу)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+      "action_time": "2023-09-25T14:46:38.393Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "12",
+      "object_repr": "ss(Вебинар про тревогу)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+      "action_time": "2023-09-25T14:47:17.146Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "первая версия(Вебинар про тревогу)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u0430\\u0437\\u0432\\u0430\\u043d\\u0438\\u0435\", \"\\u041d\\u043e\\u043c\\u0435\\u0440\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+      "action_time": "2023-09-25T14:49:26.109Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "первая версия(Вебинар про тревогу)",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+      "action_time": "2023-09-25T14:50:24.449Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "первая версия(Вебинар про тревогу)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u043e\\u043c\\u0435\\u0440\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+      "action_time": "2023-09-25T14:50:46.376Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "первая версия(Вебинар про тревогу)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u043e\\u043c\\u0435\\u0440\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+      "action_time": "2023-09-25T15:13:00.584Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "10",
+      "object_repr": "первая версия(Вебинар про тревогу)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043a\\u0443\\u0449\\u0430\\u044f\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 4,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 5,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 6,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Категория",
+      "content_type": 7,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Категория",
+      "content_type": 7,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Категория",
+      "content_type": 7,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Категория",
+      "content_type": 7,
+      "codename": "view_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Товар",
+      "content_type": 8,
+      "codename": "add_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Товар",
+      "content_type": 8,
+      "codename": "change_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Товар",
+      "content_type": 8,
+      "codename": "delete_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Товар",
+      "content_type": 8,
+      "codename": "view_product"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Контакты",
+      "content_type": 9,
+      "codename": "add_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Контакты",
+      "content_type": 9,
+      "codename": "change_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Контакты",
+      "content_type": 9,
+      "codename": "delete_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Контакты",
+      "content_type": 9,
+      "codename": "view_contacts"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add статья",
+      "content_type": 10,
+      "codename": "add_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change статья",
+      "content_type": 10,
+      "codename": "change_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete статья",
+      "content_type": 10,
+      "codename": "delete_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view статья",
+      "content_type": 10,
+      "codename": "view_article"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add Версия",
+      "content_type": 11,
+      "codename": "add_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change Версия",
+      "content_type": 11,
+      "codename": "change_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete Версия",
+      "content_type": 11,
+      "codename": "delete_version"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view Версия",
+      "content_type": 11,
+      "codename": "view_version"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$ckWUtULPf6orPpMhFJ2Usz$ajj4M+2NxyAksbhHN0BlWh+cXfxyerih+m+n8ERVZ8Y=",
+      "last_login": "2023-09-25T14:10:04.961Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-02T13:56:30.566Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Q84RrNEjxg52EJfJwBNAyb$MsOZo/0xam7huWVt3hqNh1JZtRD6guT+vczLAriMEdA=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "testuser",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2023-09-10T11:06:45.289Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "catalog",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "catalog",
+      "model": "product"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "catalog",
+      "model": "contacts"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "blog",
+      "model": "article"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "catalog",
+      "model": "version"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "0ujvoy2uhcnzpe8ufmenpiimz1ehb5ju",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQRO_iGllr8C-U9DmDZe-ucQDZUpxUiLuTSCmgnHlv5i1CXJcS1s5zmEhchRKn3y5FfHLdAT1ivTeJrS7zlOSuyIN2OTbi1-1w_w5K7GVbo4kYHVjIhGdlB-MASAHxRWWfvULtUjacPRi9JcWG0-BNBo0evCXx-QLnHjfT:1qkPv3:pDX2bKNDZp1QrL3QUeEIlJatm0Okm9hUo5tyFeKDv5Q",
+      "expire_date": "2023-10-08T14:17:09.409Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "5dyuters7be0sffvi0nwclr4hw7byk2n",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQRO_iGllr8C-U9DmDZe-ucQDZUpxUiLuTSCmgnHlv5i1CXJcS1s5zmEhchRKn3y5FfHLdAT1ivTeJrS7zlOSuyIN2OTbi1-1w_w5K7GVbo4kYHVjIhGdlB-MASAHxRWWfvULtUjacPRi9JcWG0-BNBo0evCXx-QLnHjfT:1qcR7t:e_TWpDLU_o15I3LRRfau-l_ZDSSaxThjKoxjCuZ1zg8",
+      "expire_date": "2023-09-16T13:57:25.392Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "hur6z6zo601drew2usu1as6qouqzwu88",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQRO_iGllr8C-U9DmDZe-ucQDZUpxUiLuTSCmgnHlv5i1CXJcS1s5zmEhchRKn3y5FfHLdAT1ivTeJrS7zlOSuyIN2OTbi1-1w_w5K7GVbo4kYHVjIhGdlB-MASAHxRWWfvULtUjacPRi9JcWG0-BNBo0evCXx-QLnHjfT:1qdZdo:0H5YrK4DDpgUT55muLphXUPEIv2CaUayqEtWEX0l2So",
+      "expire_date": "2023-09-19T17:15:04.554Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "j0zwv6bzxrktux5qmz0slwqldlyulsj9",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQRO_iGllr8C-U9DmDZe-ucQDZUpxUiLuTSCmgnHlv5i1CXJcS1s5zmEhchRKn3y5FfHLdAT1ivTeJrS7zlOSuyIN2OTbi1-1w_w5K7GVbo4kYHVjIhGdlB-MASAHxRWWfvULtUjacPRi9JcWG0-BNBo0evCXx-QLnHjfT:1qkmHk:q9fZS_x0PGN_0qedZ8-UdbzFlnY54lC2JJIAAjohzvQ",
+      "expire_date": "2023-10-09T14:10:04.963Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "nrtyykymi11mxnpuv8ta181andl2r3nr",
+    "fields": {
+      "session_data": ".eJxVjDsOwjAQRO_iGllr8C-U9DmDZe-ucQDZUpxUiLuTSCmgnHlv5i1CXJcS1s5zmEhchRKn3y5FfHLdAT1ivTeJrS7zlOSuyIN2OTbi1-1w_w5K7GVbo4kYHVjIhGdlB-MASAHxRWWfvULtUjacPRi9JcWG0-BNBo0evCXx-QLnHjfT:1qeyav:CYsNyzmfTDY4KNhVPlyWi11OSdfITgW_gA8-D75YSuY",
+      "expire_date": "2023-09-23T14:05:53.157Z"
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 59,
     "fields": {
       "title": "Регуляция эмоций",
       "description": "Ослабляем негативные эмоции\r\nКонтакт с позитивными эмоциями\r\nРаспознаем эмоции и автоматические негативные мысли\r\nВалидация эмоции",
       "pic": "",
       "price": 10,
-      "created_at": null,
-      "updated_at": null,
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-06T14:51:27.698Z",
       "category": 2
     }
   },
   {
     "model": "catalog.product",
-    "pk": 48,
+    "pk": 60,
     "fields": {
       "title": "Нетревожный бот",
       "description": "-Нейробиология и физиология тревоги\r\n-Как помочь себе при тревоге?\r\n-Разбираемся, что влияет на тревогу\r\n-Используем дыхательные практики",
       "pic": "",
       "price": 10,
-      "created_at": null,
-      "updated_at": "2023-09-06T13:59:10.437Z",
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-25T17:26:07.508Z",
       "category": 2
     }
   },
   {
     "model": "catalog.product",
-    "pk": 49,
+    "pk": 61,
     "fields": {
       "title": "Безоценочные суждения",
       "description": "Оценочное vs безоценочное\r\nРазвиваем навык безоценочных суждений\r\nУчимся разделять фантазии и реальность\r\nПрокачиваем осознанную коммуникацию",
       "pic": "",
       "price": 10,
-      "created_at": null,
-      "updated_at": null,
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-06T14:51:27.698Z",
       "category": 2
     }
   },
   {
     "model": "catalog.product",
-    "pk": 50,
+    "pk": 62,
     "fields": {
       "title": "Частная консультация",
       "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Частная консультация>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 100,
-      "created_at": null,
-      "updated_at": null,
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-25T14:45:30.955Z",
       "category": 3
     }
   },
   {
     "model": "catalog.product",
-    "pk": 51,
+    "pk": 63,
     "fields": {
       "title": "Лекционно-дискуссионный клуб",
       "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Участие в лекционно-дискуссионном клубе>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 30,
-      "created_at": null,
-      "updated_at": null,
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-06T14:51:27.698Z",
       "category": 1
     }
   },
   {
     "model": "catalog.product",
-    "pk": 52,
+    "pk": 64,
     "fields": {
       "title": "Семейная консультация",
       "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Семейная консультация>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 140,
-      "created_at": null,
-      "updated_at": null,
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-06T14:51:27.698Z",
       "category": 3
     }
   },
   {
     "model": "catalog.product",
-    "pk": 53,
+    "pk": 65,
     "fields": {
       "title": "Вебинар про панические атаки",
       "description": "<Описание>\r\n<Описание>\r\n<Описание>\r\n<Вебинар про панические атаки (онлайн)>\r\n<Описание>\r\n<Описание>\r\n<Описание>",
       "pic": "",
       "price": 20,
-      "created_at": null,
-      "updated_at": null,
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-25T16:48:56.437Z",
       "category": 1
     }
   },
   {
     "model": "catalog.product",
-    "pk": 56,
+    "pk": 66,
     "fields": {
       "title": "Вебинар про тревогу",
       "description": "длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание / длинное описание /",
       "pic": "pics/трегова.jpeg",
       "price": 20,
-      "created_at": null,
-      "updated_at": "2023-09-06T14:38:03.717Z",
+      "created_at": "2023-09-06",
+      "updated_at": "2023-09-25T14:51:00.621Z",
       "category": 1
     }
   },
   {
     "model": "catalog.product",
-    "pk": 58,
+    "pk": 68,
     "fields": {
-      "title": "TEST",
-      "description": "test test test test test test \r\ntest test test test test test \r\ntest test test test test test\r\ntest test test test test test \r\ntest test test test test test \r\ntest test test test test test\r\ntest test test test test test \r\ntest test test test test test \r\ntest test test test test test",
+      "title": "Медитации",
+      "description": "тратттааа тратттааа тратттааа тратттааа тратттааа тратттааа  тратттааа тратттааа  м",
       "pic": "",
-      "price": 10,
+      "price": 20,
       "created_at": "2023-09-06",
-      "updated_at": "2023-09-06T14:00:16.179Z",
+      "updated_at": "2023-09-25T14:42:41.549Z",
       "category": 2
+    }
+  },
+  {
+    "model": "catalog.product",
+    "pk": 70,
+    "fields": {
+      "title": "Семинар про эмоции",
+      "description": "семинар про эмоции\r\nсеминар про эмоции\r\nсеминар про эмоции\r\nсеминар про эмоции\r\nсеминар про эмоции\r\nсеминар про эмоции\r\nсеминар про эмоции\r\nсеминар про эмоциисеминар про эмоции\r\nсеминар про эмоции",
+      "pic": "pics/эмоц.jpeg",
+      "price": 20,
+      "created_at": "2023-09-09",
+      "updated_at": "2023-09-09T13:18:04.244Z",
+      "category": 1
     }
   },
   {
@@ -141,12 +1494,138 @@
     }
   },
   {
+    "model": "catalog.version",
+    "pk": 1,
+    "fields": {
+      "title": "Нетревожный бот (полная версия)",
+      "num": 1,
+      "created_at": "2023-09-25",
+      "updated_at": "2023-09-25T17:26:07.507Z",
+      "product": 60,
+      "is_active": "YES"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 2,
+    "fields": {
+      "title": "Нетревожный бот (сокращенная версия)",
+      "num": 2,
+      "created_at": "2023-09-25",
+      "updated_at": "2023-09-25T17:24:38.963Z",
+      "product": 60,
+      "is_active": "YES"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 10,
+    "fields": {
+      "title": "первая версия",
+      "num": 1,
+      "created_at": "2023-09-25",
+      "updated_at": "2023-09-25T15:13:00.576Z",
+      "product": 66,
+      "is_active": "YES"
+    }
+  },
+  {
+    "model": "catalog.version",
+    "pk": 14,
+    "fields": {
+      "title": "ss",
+      "num": 2,
+      "created_at": "2023-09-25",
+      "updated_at": "2023-09-25T14:51:00.619Z",
+      "product": 66,
+      "is_active": "NO"
+    }
+  },
+  {
     "model": "catalog.contacts",
     "pk": 1,
     "fields": {
       "country": "Россия",
       "tax_id": 123123123,
       "address": "ул.Вагончатая, д.45, оф.3"
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 8,
+    "fields": {
+      "title": "статья для слага2",
+      "slug": "statya-dlya-slaga2",
+      "content": "для слага2\r\nдля слага2\r\nдля слага2\r\nдля слага2\r\nдля слага2\r\nдля слага2\r\nдля слага2м\r\nдля слага2\r\nдля слага2\r\nдля слага2",
+      "preview": "",
+      "created_at": "2023-09-10",
+      "is_published": false,
+      "views_count": 4
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 9,
+    "fields": {
+      "title": "Статья номер 1",
+      "slug": "statya-nomer-1",
+      "content": "Статья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nСтатья номер 1\r\nм\r\nм\r\nм\r\nСтатья номер 1\r\n\r\nмСтатья номер 1",
+      "preview": "статья_OxUF6In.jpeg",
+      "created_at": "2023-09-10",
+      "is_published": true,
+      "views_count": 5
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 10,
+    "fields": {
+      "title": "Статья номер два",
+      "slug": "statya-nomer-dva",
+      "content": "updated\r\nсодержание статьи 2\r\nсодержание статьи 2\r\nсодержание статьи 2\r\nсодержание статьи 2\r\nсодержание статьи 2\r\nм\r\nм\r\nсодержание статьи 2\r\nм\r\nсодержание статьи 2\r\nсодержание статьи 2",
+      "preview": "kkk_2eLcgij.png",
+      "created_at": "2023-09-10",
+      "is_published": true,
+      "views_count": 6
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 11,
+    "fields": {
+      "title": "новая статья 3",
+      "slug": "novaya-statya-pod-nomerom-3",
+      "content": "новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 \r\nновая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 \r\nновая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3 новая статья под номером 3",
+      "preview": "444_xnxCedX.jpg",
+      "created_at": "2023-09-10",
+      "is_published": true,
+      "views_count": 6
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 12,
+    "fields": {
+      "title": "четвертая статейка",
+      "slug": "chetvertaya-statejka",
+      "content": "оо ааааа\r\nи\r\n\r\n\r\nаааааа\r\nууууууууу\r\nгггггг\r\nс\r\n\r\nсссссссс\r\nоо ааааа\r\nи\r\n\r\n\r\nаааааа\r\nууууууууу\r\nгггггг\r\nс\r\n\r\nсссссссс\r\nоо ааааа\r\nи\r\n\r\n\r\nаааааа\r\nууууууууу\r\nгггггг\r\nс\r\n\r\nсссссссс\r\nоо ааааа\r\nи\r\n\r\n\r\nаааааа\r\nууууууууу\r\nгггггг\r\nс\r\n\r\nсссссссс",
+      "preview": "",
+      "created_at": "2023-09-10",
+      "is_published": false,
+      "views_count": 3
+    }
+  },
+  {
+    "model": "blog.article",
+    "pk": 13,
+    "fields": {
+      "title": "статья из админки",
+      "slug": "statya-iz-adminki",
+      "content": "статья из админки\r\nстатья из админки\r\nстатья из админки\r\nстатья из админки\r\nстатья из админки\r\nстатья из админки\r\nстатья из админки",
+      "preview": "",
+      "created_at": "2023-09-10",
+      "is_published": false,
+      "views_count": 3
     }
   }
 ]

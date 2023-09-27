@@ -1,0 +1,25 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+
+<div class="container text-center">
+    <form method="POST" action="" class="row gx-5" enctype="multipart/form-data">
+        <div class="col-4 text-start"></div>
+        <div class="col-4 text-start">
+            <div class="card gy-5 ">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal text-center">Вход:</h4>
+                </div>
+                <div class="card-body">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-dark w-100" type="submit">Войти</button>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'users:update_password' %}" class="btn btn-outline-danger form-control">Не помню
+                        пароль</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    {% endblock %}
+</div>
