@@ -39,8 +39,6 @@
         <div class="d-flex justify-content-between align-items-center">
             <div class="btn-group text-center">
                 <a href="{% url 'catalog:edit_product' object.pk %}" type="button"
-                   class="btn btn-sm btn-outline-secondary">View</a>
-                <a href="{% url 'catalog:edit_product' object.pk %}" type="button"
                    class="btn btn-sm btn-outline-secondary">Edit</a>
                 <a href="{% url 'catalog:delete_product' object.pk %}" type="button"
                    class="btn btn-sm btn-outline-danger">Delete</a>
@@ -48,6 +46,10 @@
         </div>
     </div>
     <div class="row mt-3 text-start text-muted">
+        <a>Владелец записи:
+            {% if object.owner %} {{ object.owner }}
+            {% else %} Неизвестен
+            {% endif %}</a>
         <a>Запись создана: {{ object.created_at }}</a>
         <a>Запись изменена: {{ object.updated_at }}</a>
     </div>
