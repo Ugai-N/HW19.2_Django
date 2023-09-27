@@ -52,9 +52,9 @@ class VersionForm(StyleFormMixin, forms.ModelForm):
     #         raise forms.ValidationError('Уже есть активная версия')
 
 
-class VersionBaseInLineFormSet(BaseInlineFormSet):
-    def clean(self):
-        super().clean()
-        product_versions_list = [form.cleaned_data['is_active'] for form in self.forms if 'is_active' in form.cleaned_data]
-        if product_versions_list.count('YES') > 1:
-            raise forms.ValidationError('Уже есть активная версия')
+# class VersionBaseInLineFormSet(BaseInlineFormSet):
+#     def clean(self):
+#         super().clean()
+#         product_versions_list = [form.cleaned_data['is_active'] for form in self.forms if 'is_active' in form.cleaned_data]
+#         if product_versions_list.count('YES') > 1:
+#             raise forms.ValidationError('Уже есть активная версия')
