@@ -6,3 +6,7 @@ ipython
 pillow
 psycopg2
 pytils
+django-crispy-forms
+crispy-bootstrap4
+redis
+python-dotenv
