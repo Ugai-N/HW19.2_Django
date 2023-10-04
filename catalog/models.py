@@ -45,9 +45,8 @@ class Version(models.Model):
     created_at = models.DateField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата изменения')
     product = models.ForeignKey('Product', on_delete=models.CASCADE, verbose_name='Товар')
-    is_active = models.CharField(verbose_name='Текущая', choices=(('YES', 'ДА'), ('NO', 'НЕТ')), default='NO')
-
-    # is_active = models.BooleanField(verbose_name='Текущая', default=False)
+    # is_active = models.CharField(verbose_name='Текущая', choices=(('YES', 'ДА'), ('NO', 'НЕТ')), default='NO')
+    is_active = models.BooleanField(verbose_name='Текущая', default=False)
 
     def __str__(self):
         return f'{self.title}({self.product.title})'

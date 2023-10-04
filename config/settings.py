@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'catalog',
     'blog',
     'users',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -143,3 +145,14 @@ EMAIL_USE_SSL = True
 SERVER_EMAIL = EMAIL_HOST_USER
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 EMAIL_ADMIN = EMAIL_HOST_USER
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# CACHE_ENABLED = True
+# if CACHE_ENABLED:
+#     CACHES = {
+#         "default": {
+#             "BACKEND": "django.core.cache.backends.redis.RedisCache",
+#             "LOCATION": "redis://127.0.0.1:6379",
+#         }
+#     }
